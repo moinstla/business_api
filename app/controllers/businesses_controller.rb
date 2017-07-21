@@ -3,6 +3,7 @@ class BusinessesController < ApplicationController
   def index
     @businesses = Business.all
     json_response(@businesses)
+      @businesses = Business.name_search(name)
   end
 
   def show
