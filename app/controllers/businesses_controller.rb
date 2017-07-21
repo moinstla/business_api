@@ -4,7 +4,9 @@ class BusinessesController < ApplicationController
     @businesses = Business.all
     name = params[:name]
     @businesses = Business.name_search(name)
-    json_response(@businesses.page(params[:page]))
+    @businesses = Business.random
+    json_response(@businesses)
+    # json_response(@businesses.page(params[:page]))
   end
 
   def show
