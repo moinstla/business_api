@@ -293,7 +293,8 @@
         null,
         1,
         2,
-        null,
+        2,
+        2,
         2,
         null,
         null,
@@ -357,7 +358,7 @@
         1,
         1,
         null,
-        null,
+        3,
         null
       ],
       "/Users/moinstla/Desktop/business_api/spec/factories.rb": [
@@ -504,6 +505,6 @@
         null
       ]
     },
-    "timestamp": 1500677647
+    "timestamp": 1500678115
   }
 }
