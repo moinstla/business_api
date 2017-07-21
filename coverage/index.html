@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-21T15:50:42-07:00">2017-07-21T15:50:42-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-21T15:54:07-07:00">2017-07-21T15:54:07-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.36%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.31
+         1.32
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>29</b> files in total.
-    <b>157</b> relevant lines. 
-    <span class="green"><b>156</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>30</b> files in total.
+    <b>164</b> relevant lines. 
+    <span class="green"><b>164</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#1449686006cf114d2d5ff9ee16f496a319c5a37e" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
-        <td class="red strong">80.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>8</td>
         <td>5</td>
-        <td>4</td>
-        <td>1</td>
-        <td>1.0</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>23</td>
         <td>23</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -311,6 +311,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#d401693c083caeee48b152205453658cf87c6bbf" class="src_link" title="spec/requests/get_exception_spec.rb">spec/requests/get_exception_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>7</td>
+        <td>7</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#5acb2707982fa2030522a5cd30a342c2c3099b44" class="src_link" title="spec/requests/patch_business_spec.rb">spec/requests/patch_business_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>25</td>
@@ -445,11 +455,11 @@
         <div class="source_table" id="1449686006cf114d2d5ff9ee16f496a319c5a37e">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
-    <h4><span class="red">80.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>5</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -468,8 +478,8 @@
           <code class="ruby">  rescue_from ActiveRecord::RecordNotFound do |exception|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
-          
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
           <code class="ruby">    json_response({ message: exception.message }, :not_found)</code>
         </li>
@@ -577,8 +587,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">      business = Business.find(params[:id])</code>
         </li>
@@ -757,8 +767,8 @@
           <code class="ruby">  def json_response(object, status = :ok)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="40">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="40">
+          <span class="hits">11</span>
           
           <code class="ruby">  render json: object.as_json, status: status</code>
         </li>
@@ -3030,6 +3040,103 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="d401693c083caeee48b152205453658cf87c6bbf">
+  <div class="header">
+    <h3>spec/requests/get_exception_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &#39;get exception route&#39;, type: :request do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    business = FactoryGirl.create(:business)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    get &quot;/businesses/7&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;returns error message&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(JSON.parse(response.body)[&#39;message&#39;]).to eq &quot;Couldn&#39;t find Business with &#39;id&#39;=7&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
