@@ -2,44 +2,45 @@ class BusinessesController < ApplicationController
 
   def index
     @businesses = Business.all
+    # @businesses = Business.name_search(name)
     json_response(@businesses)
-      @businesses = Business.name_search(name)
   end
 
   def show
-      @businesse = Business.find(params[:id])
+      @businesses = Business.find(params[:id])
       json_response(@businesses)
     end
 
     def create
-      @businesses = Business.create!(businesse_params)
-      json_response(@businesses, :created)
-      render status: 200, json: {
-     message: "This business has been created."
-     }
+      @businesses = Business.create!(businesses_params)
+      json_response(@business)
     end
 
     def update
       @businesses = Business.find(params[:id])
-      @businesses.update(businesse_params)
-      render status: 200, json: {
-     message: "This business has been updated."
-     }
+      @businesses.update(businesses_params)
+    #   if @business.update! (business_params)
+    #     render status: 200, json: {
+    #     message: "This business has been updated."
+    #   }
+      # end
     end
 
     def destroy
       @businesses = Business.find(params[:id])
       @businesses.destroy
-      render status: 200, json: {
-     message: "This business has been deleted."
-     }
+  #     if @business.destroy!
+  #     render status: 200, json: {
+  #       message: "This business has been deleted."
+  #     }
+  # end
     end
 
 
   private
-  def json_response(object)
-    render json: object, status: :ok
-  end
+  def json_response(object, status = :ok)
+  render json: object.as_json, status: status
+end
 
   def business_params
     params.permit(:name, :business_type, :address)
