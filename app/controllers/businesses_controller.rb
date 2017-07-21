@@ -7,8 +7,8 @@ class BusinessesController < ApplicationController
   end
 
   def show
-      @businesses = Business.find(params[:id])
-      json_response(@businesses)
+      business = Business.find(params[:id])
+      json_response(business)
     end
 
     def create
@@ -17,23 +17,21 @@ class BusinessesController < ApplicationController
     end
 
     def update
-      @businesses = Business.find(params[:id])
-      @businesses.update(business_params)
-    #   if @business.update! (business_params)
-    #     render status: 200, json: {
-    #     message: "This business has been updated."
-    #   }
-      # end
+      @business = Business.find(params[:id])
+      if @business.update!(business_params)
+        render status: 200, json: {
+        message: "This business has been updated."
+      }
+      end
     end
 
     def destroy
-      @businesses = Business.find(params[:id])
-      @businesses.destroy
-  #     if @business.destroy!
-  #     render status: 200, json: {
-  #       message: "This business has been deleted."
-  #     }
-  # end
+      @business = Business.find(params[:id])
+      if @business.destroy!
+      render status: 200, json: {
+        message: "This business has been deleted."
+      }
+      end
     end
 
 
