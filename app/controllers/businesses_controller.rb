@@ -12,13 +12,13 @@ class BusinessesController < ApplicationController
     end
 
     def create
-      @businesses = Business.create!(businesses_params)
+      @business = Business.create!(business_params)
       json_response(@business)
     end
 
     def update
       @businesses = Business.find(params[:id])
-      @businesses.update(businesses_params)
+      @businesses.update(business_params)
     #   if @business.update! (business_params)
     #     render status: 200, json: {
     #     message: "This business has been updated."
