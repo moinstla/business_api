@@ -11,18 +11,27 @@ class BusinessesController < ApplicationController
     end
 
     def create
-      @businesses = Business.create(businesse_params)
-      json_response(@businesses)
+      @businesses = Business.create!(businesse_params)
+      json_response(@businesses, :created)
+      render status: 200, json: {
+     message: "This business has been created."
+     }
     end
 
     def update
       @businesses = Business.find(params[:id])
       @businesses.update(businesse_params)
+      render status: 200, json: {
+     message: "This business has been updated."
+     }
     end
 
     def destroy
       @businesses = Business.find(params[:id])
       @businesses.destroy
+      render status: 200, json: {
+     message: "This business has been deleted."
+     }
     end
 
 
