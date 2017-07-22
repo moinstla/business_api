@@ -1,12 +1,16 @@
 class BusinessesController < ApplicationController
 
   def index
-    @businesses = Business.all
-    name = params[:name]
-    @businesses = Business.name_search(name)
-    @businesses = Business.random
+    if name = params[:name]
+      @businesses = Business.name_search(name)
+    elsif params[:random]
+      @businesses = Business.random
+    elsif page = params[:page]
+      @businesses = Business.page
+    else
+      @businesses = Business.all
+    end
     json_response(@businesses)
-    # json_response(@businesses.page(params[:page]))
   end
 
   def show

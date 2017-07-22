@@ -4,5 +4,5 @@ class Business < ApplicationRecord
   validates :address, presence: true
 
   scope :name_search, -> (input) { where("name like ?", "%#{input}") }
-  scope :random, -> { order("RANDOM()").first }
+  scope :random, -> { Business.order("RANDOM()").first }
 end
